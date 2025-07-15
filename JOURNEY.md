@@ -12,4 +12,11 @@ Note - This is the up to date journal, not the ones in the branches.
     e. restarted the venv and installed fastapi
     f. ran a fastapi test on a branch - it worked
     g. more fastapi learning tomorrow
+3. 7/14
+    a. Finished the fastapi tutorial. Key concepts:
+        aa. Basic API function ('Hello World')
+        ab. Main types of requests - GET, POST, PUT, DELETE
+        ac. Pydantic Schemes and Data Validation
+        ad. Wrote everything reflecting a list of dictionaries, need to learn PostgreSQL for database
+        ae. HTTP Exceptions and /docs 
     
