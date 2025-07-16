@@ -19,4 +19,7 @@ Note - This is the up to date journal, not the ones in the branches.
         ac. Pydantic Schemes and Data Validation
         ad. Wrote everything reflecting a list of dictionaries, need to learn PostgreSQL for database
         ae. HTTP Exceptions and /docs 
+4. 7/15
+    a. Started Postgres - installed Postico2 as my editor, using pgadmin4 to control databases
+    b. tutorial finished by tomorrow, but its all in Postico so nothing new here
     
