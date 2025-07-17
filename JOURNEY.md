@@ -19,7 +19,15 @@ Note - This is the up to date journal, not the ones in the branches.
         ac. Pydantic Schemes and Data Validation
         ad. Wrote everything reflecting a list of dictionaries, need to learn PostgreSQL for database
         ae. HTTP Exceptions and /docs 
-4. 7/15
-    a. Started Postgres - installed Postico2 as my editor, using pgadmin4 to control databases
-    b. tutorial finished by tomorrow, but its all in Postico so nothing new here
+4. 7/15  
+    a. Started Postgres - installed Postico2 as my editor, using pgadmin4 to control databases  
+    b. tutorial finished by tomorrow, but its all in Postico so nothing new in this repository  
+5. 7/16  
+    a. Finished PostgreSQL tutorial on Postico
+        aa. basic tables, entities, keywords  
+        ab. Create, Read, Update, Delete (CRUD) functions  
+        ac. Relational tables  
+    b. Knowing this, I can start thinking through some basic database design for my project  
+        ba. Table of users with table of recipes, a user can have many recipes (one-to-many)  
+    c. SQLAlchemy starts tomorrow, goal is to finish by Saturday and start endpoints over the weekend
     
