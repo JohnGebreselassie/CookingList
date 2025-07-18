@@ -29,4 +29,10 @@ Hopefully I update this every day from learning something new.
     b. Knowing this, I can start thinking through some basic database design for my project  
         ba. Table of users with table of recipes, a user can have many recipes (one-to-many)  
     c. SQLAlchemy starts tomorrow, goal is to finish by Saturday and start endpoints over the weekend
+6. 7/17
+    a. Started SQLAlchemy tutorial
+    b. Found out along the way that i needed a PostgreSQL adapter for python to use SQLAlchemy Core
+    c. Installed psycopg2 off a video recommendation, was a nightmare to install
+    d. Finally connected to the database(createdb database) and created a table in there from python, pretty cool
+    e. SQL Alchemy tutorial done tomorrow hopefully, trying to finish both Core and ORM and decide which is best for the project
     
