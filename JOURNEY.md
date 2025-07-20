@@ -35,4 +35,10 @@ Hopefully I update this every day from learning something new.
     c. Installed psycopg2 off a video recommendation, was a nightmare to install
     d. Finally connected to the database(createdb database) and created a table in there from python, pretty cool
     e. SQL Alchemy tutorial done tomorrow hopefully, trying to finish both Core and ORM and decide which is best for the project
+7. 7/19
+    a. Took the day off yesterday - leetcode
+    b. Finished SQL Alchemy core/ORM tutorial
+    c. gonna be using the ORM when i create my api, seems much more intuitive to use
+    d. Only goal tomorrow is to start creating and testing endpoints, but it might be more difficult then i think
+    e. Im giving myself all of next week to finish the CRUD
     
