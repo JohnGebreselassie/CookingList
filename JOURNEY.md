@@ -42,4 +42,14 @@ Note - This is the up to date journal, not the ones in the branches.
     c. gonna be using the ORM when i create my api, seems much more intuitive to use
     d. Only goal tomorrow is to start creating and testing endpoints, but it might be more difficult then i think
     e. Im giving myself all of next week to finish the CRUD
-    
+8. 7/20+7.21
+	a. Began designing my API - CookingAPI_Outline.md
+		aa. Originally did it in Obsidian and migrated it to my git repo, which is why there were no commits on 7/20
+	b. Includes database schema:
+		ba. Tables
+		bb. Table relationships
+		bc. Table fields
+	c. Includes API endpoints
+		ca. Listed all API endpoints
+		cb. Full implementations of all CRUD
+	d. To-do: implement CRUD, then implemtn secure endpoints
