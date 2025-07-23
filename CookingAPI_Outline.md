@@ -40,7 +40,7 @@ Main Principles:
 * ingredient_name: String(required) - name of each ingredient
 **Relationships**:
 * Many to many with Recipes a recipe can have multiple ingredients, an ingredient can have multiple recipes)
-
+	
 **Table 4: Recipe_Ingredients_Mapping
 **Purpose:** Facilitate the many to many relationship between ingredients and recipes
 **Fields:**

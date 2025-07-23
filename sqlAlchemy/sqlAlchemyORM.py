@@ -6,7 +6,7 @@ from sqlalchemy.orm import declarative_base, sessionmaker, relationship #declara
 engine = create_engine('postgresql+psycopg2://postgres:4641@localhost:5432/satutorialdatabase', echo = True) #postgres version
     #can read more about this in sqlAlchemyCore
 
-Base = declarative_base()
+Base = declarative_base() #this lets you map your databases in here to real databases
 
 class Person(Base):
     __tablename__ = 'people' #name of database
