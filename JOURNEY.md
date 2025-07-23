@@ -53,3 +53,7 @@ Note - This is the up to date journal, not the ones in the branches.
 		ca. Listed all API endpoints
 		cb. Full implementations of all CRUD
 	d. To-do: implement CRUD, then implemtn secure endpoints
+9. 7/22
+	a. Didn't have much time today, but began outlining the database in a file named database.py
+	b. Learned some more about the relationship() function along the way
+	c. database.py finished tomorrow for sure
