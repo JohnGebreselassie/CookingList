@@ -54,7 +54,7 @@ Main Principles:
 **Purpose**: Shopping List for each User
 **Fields**:
 * shopping_id: Integer (Primary key) - id of each shopping list, increments + unique
-* shopping_name: String(required) - name of each ingredient
+* shopping_name: String(required) - name of each shopping list4
 * owner_id: Integer(required, ForeignKey) - maps each shopping list to an owner in Users
 **Relationships**:
 * One to many with Users - each user can have multiple shopping lists
