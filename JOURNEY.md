@@ -57,3 +57,7 @@ Note - This is the up to date journal, not the ones in the branches.
 	a. Didn't have much time today, but began outlining the database in a file named database.py
 	b. Learned some more about the relationship() function along the way
 	c. database.py finished tomorrow for sure
+10. 7/23
+	a. Finished database.py - all databases should be setup exactly like how the schema has them written/prepareed
+		aa. 6 databases - 4 main: (user, recipe, ingredient, shoppinglist) and 2 relational for many-to-many: recipe-ingredient, shoppinglist-ingredient
+	b. Tomorrow - begin writing endpoints
