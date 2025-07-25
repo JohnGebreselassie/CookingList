@@ -61,3 +61,10 @@ Note - This is the up to date journal, not the ones in the branches.
 	a. Finished database.py - all databases should be setup exactly like how the schema has them written/prepareed
 		aa. 6 databases - 4 main: (user, recipe, ingredient, shoppinglist) and 2 relational for many-to-many: recipe-ingredient, shoppinglist-ingredient
 	b. Tomorrow - begin writing endpoints
+11. 7/24
+	a. After starting main.py, it occurred to me that without some structure, this main.py was gonna get messy
+	b. decided to split it into main.py, database.py(finished yesterday), schemas.py(pydantic models)
+		bb. main.py will essentially be split into 4 mini programs - users.py, recipes.py, ingredients.py, and shoppinglist.py
+		bc. Considered splitting by type of endpoint, but we'll see whats easier
+	c. Updated the Outline to reflect these changes
+	d. Goal tomorrow: write/finish pydantic models(schema.py)
