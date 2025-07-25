@@ -1,11 +1,18 @@
 from sqlalchemy import create_engine, Column, Integer, String, Float, ForeignKey, func, Boolean
 from sqlalchemy.orm import declarative_base, sessionmaker, relationship #declarative_base replaces metadata from Core, and sessionmaker cause ORM uses sessions, not connections
 
+#this class contains:
+#   1. instantiation of engine, base, session
+#   2. All database tables being created in postgres
+
+
 #orm maps python classes to database
 engine = create_engine('postgresql+psycopg2://postgres:4641@localhost:5432/cookingAPI', echo = True) #postgres version
     #can read more about this in sqlAlchemyCore
 
 Base = declarative_base()
+
+Session = sessionmaker(bind=engine)
 
 #primary tables
 class User (Base):
