@@ -40,7 +40,7 @@ Main Principles:
 * ingredient_name: String(required) - name of each ingredient
 **Relationships**:
 * Many to many with Recipes a recipe can have multiple ingredients, an ingredient can have multiple recipes)
-	
+
 **Table 4: Recipe_Ingredients_Mapping
 **Purpose:** Facilitate the many to many relationship between ingredients and recipes
 **Fields:**
@@ -54,7 +54,7 @@ Main Principles:
 **Purpose**: Shopping List for each User
 **Fields**:
 * shopping_id: Integer (Primary key) - id of each shopping list, increments + unique
-* shopping_name: String(required) - name of each shopping list4
+* shopping_name: String(required) - name of each ingredient
 * owner_id: Integer(required, ForeignKey) - maps each shopping list to an owner in Users
 **Relationships**:
 * One to many with Users - each user can have multiple shopping lists
@@ -93,3 +93,15 @@ Main Principles:
 	1. This is to return recipes for specific ingredients
 	2. and/or version?
 	3. Will return a list of recipe ids
+
+## 7/24 update: File Structure
+1. database.py - engine, base, session, and all 6 database classes for the ORM
+2. schemas.py - pydantic models
+	1. Was gonna include this in main, but I think theres gonna be a lot of them
+3. main.py - access point
+4. api endpoints, split into 4 files
+	1. users.py
+	2. ingredients.py
+	3. recipes.py
+	4. shopping_list.py
+	Chose these instead of splitting by type of endpoint(get, post, etc. ) because I imagine there will never be a point where I want to restructure all GET endpoints, but there might be a point where having a holistic view of each databases endpoints will be useful ex. knowing how user information is stored so I know how to get it out
