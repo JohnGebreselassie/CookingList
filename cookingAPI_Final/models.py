@@ -72,7 +72,8 @@ class userCreate(userBase): #create a user
 
 class userModel(userBase): #for when you need to return everything associated with a user
     user_id: int = Field(..., description = "unique id for user instance")
-
+    class Config:
+        orm_mode = True
 class userUpdate(BaseModel): #optional parameters
     username: Optional[str] = Field(None, min_length=1, max_length=512, description = "username")
     password: Optional[str] = Field(None, description = "password for user")

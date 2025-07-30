@@ -7,12 +7,12 @@ from sqlalchemy.orm import declarative_base, sessionmaker, relationship #declara
 
 
 #orm maps python classes to database
-engine = create_engine('postgresql+psycopg2://postgres:4641@localhost:5432/cookingAPI', echo = True) #postgres version
+engine = create_engine('postgresql+psycopg2://postgres:4641@localhost:5432/cookingAPI') #postgres version
     #can read more about this in sqlAlchemyCore
 
 Base = declarative_base()
 
-Session = sessionmaker(bind=engine)
+SessionLocal = sessionmaker(bind=engine)
 
 #primary tables
 class User (Base):
