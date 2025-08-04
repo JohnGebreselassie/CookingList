@@ -13,8 +13,8 @@ def get_db():
     finally:
         db.close()
 
-@router.get('/users/', response_model=List[models.userModel])
-def get_users(firstn: Optional[int] = None, db: Session = Depends(get_db)):
+@router.get('/users', response_model=List[models.userModel], status_code=status.HTTP_200_OK)
+def get_all_users(firstn: Optional[int] = None, db: Session = Depends(get_db)):
     query = db.query(database.User) #db.query is the money function, google it to understand the rest
     if firstn is not None and firstn > 0:
         query = query.limit(firstn) #gets only firstn results
@@ -31,7 +31,7 @@ def get_users(id: int, db: Session = Depends(get_db)):
     return user
 
 
-@router.post('/users/', response_model = models.userModel, status_code=status.HTTP_201_CREATED)
+@router.post('/users', response_model = models.userModel, status_code=status.HTTP_201_CREATED)
 def create_user(new_user: models.userCreate, db: Session = Depends(get_db)):
     new = database.User(username = new_user.username, password = new_user.password)
     db.add(new) #adds to database
