@@ -19,7 +19,6 @@ class UnitEnum(str, Enum): #this exists to make units consistent across all nami
 
 class recipeIngredientBase(BaseModel): #base class
     ingredient_id: int = Field(..., gt=0, description = 'ingredient associated with this recipe')
-    recipe_id: int = Field(..., gt=0, description="Recipe this ingredient is part of")
     quantity: float = Field(..., gt=0, description = 'amount of an ingredient')
     unit: UnitEnum = Field(..., description = "unit of measurement")
 
@@ -28,6 +27,10 @@ class recipeIngredientCreate(recipeIngredientBase): #create a recipe-ingredient 
 
 class recipeIngredientModel(recipeIngredientBase): #for when you need to return everything associated with a recipe-ingredient pair
     recipe_ingredient_id: int = Field(..., description = "unique id for a recipe_ingredient mapping")
+    recipe_id: int = Field(..., description = "recipe for the model")
+    
+    class Config:
+        from_attributes = True
 
 
 class recipeIngredientUpdate(BaseModel): #optional parameters
@@ -112,6 +115,9 @@ class recipeModel(recipeBase): #for when you need to return everything associate
     recipe_id: int = Field(..., description = "unique id for recipe instance")
     ingredients: List[recipeIngredientModel] = Field(default_factory=list, description= 'ingredients in the recipe')
 
+    class Config:
+        from_attributes = True
+        
 class recipeUpdate(BaseModel): #optional parameters
     recipe_name: Optional[str] = Field(None, min_length=1, max_length=512, description = "recipe name")
     instructions: Optional[str] = Field(None, description = "instructions for the recipe")

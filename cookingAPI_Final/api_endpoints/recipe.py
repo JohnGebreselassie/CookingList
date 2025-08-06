@@ -34,9 +34,24 @@ def get_recipe(id: int, db: Session = Depends(get_db)):
 @router.post('/recipes', response_model = models.recipeModel, status_code=status.HTTP_201_CREATED)
 def create_recipe(new_recipe: models.recipeCreate, db: Session = Depends(get_db)):
     new = database.Recipe(recipe_name = new_recipe.recipe_name, recipe_instructions = new_recipe.instructions, recipe_time = new_recipe.time, owner_id = new_recipe.owner_id)
+    #note - this line ^ has some weird naming conventions, because I used it to clarify relationships
     db.add(new) #adds to database
     db.commit() #commits change to database
     db.refresh(new) #updates 'new' with the data from the databse
+
+    db_recipe_ingredients = []
+    for ingredient_data in new_recipe.ingredients:
+        db_recipe_ingredients.append(database.RecipeIngredient(
+            recipe_id=new.recipe_id, # Use the new recipe's ID
+            ingredient_id=ingredient_data.ingredient_id,
+            quantity=ingredient_data.quantity,
+            unit=ingredient_data.unit
+        ))
+
+    #why we did it twice - had to do it the first time so that we could get a recipe id to exist lol
+    db.add_all(db_recipe_ingredients)
+    db.commit()
+    db.refresh(new)
     return new
 
 @router.put('/recipes/{id}', response_model = models.recipeModel, status_code=status.HTTP_200_OK)
